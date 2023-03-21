@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body{
+            background: url("rps.jpg") no-repeat fixed center;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            color: blue;
+            background-color: yellow;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            color: wheat;
+            font-size: 30px;
+        }
+        .mainSpan{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        button{
+            background-color: lightskyblue;
+            color: black;
+            font-size: large;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <style>
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid cyan;
-        }
-        .VsMatch{
-            font-weight: bold;
-            color: chartreuse;
-            font-size: large;
-        }
-        .result{
-            font-weight: bold;
-            color: red;
-            font-size: large;
-        }
-        .finalscore{
-            font-weight: bold;
-            color: blue;
-            font-size: large;
-        }
-    </style>
 </head>
+
 <body>
-    <div>
-        <h3 class="VsMatch" id="VsMatch"> </h3>
-        <h3 class="result" id="result"> </h3>
-        <h3 class="finalscore" id="finalscore"> </h3>
-    </div>
-    <script src="script.js"></script>
+    <span><h1>The game of Rock Paper Scissors!</h1></span>
+    <h2>Pick Human!</h2>
+    <span class="mainSpan">
+        <button>Rock</button>
+        <button>Paper</button>
+        <button>Scissors</button>
+    </span> 
+    <span class="score"></span>   
 </body>
 </html>
