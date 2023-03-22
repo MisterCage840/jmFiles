@@ -1,11 +1,21 @@
 const bts = document.querySelectorAll("button");
-let playerSelection = "";
-let scoreCounter =0;
+let playerSelection = "",computerSelection="";
+let playerCounter =0;
+let computerCounter = 0;
+const buttons = Array.from(bts);
+while(computerCounter!=5 || playerCounter!=5){
+    bts.forEach( btn =>{
+        let rndInt = Math.floor(Math.random()*3);
+        computerSelection = buttons[rndInt].innerText;
+        btn.addEventListener("click", )
+    })
+}
+
 const scoreBoard = document.querySelector(".score");
 
 bts.forEach( btn=> {
     btn.addEventListener("click", function(e) {
-        playerSelection = e.target;
+        playerSelection = e.target.innerText;
         console.log(playerSelection);
     });
     btn.addEventListener("mouseover", function(e){
