@@ -66,15 +66,17 @@ function playRound(playerSelection, computerSelection){
         computerCounter=0;
         alert("Game Over!");
     }
+
+    restartBt.addEventListener("click", ()=>{
+        bts.forEach(btn=>{
+            btn.disabled=false;
+        })
+        scoreBoard.innerHTML ="";
+        overallScore.innerHTML ="";
+    })
 }
 
-restartBt.addEventListener("click", ()=>{
-    bts.forEach(btn=>{
-        btn.disabled=false;
-    })
-        scoreBoard = "";
-        overallScore = "";
-    })
+
 
 bts.forEach( btn =>{
     btn.addEventListener("click", ()=> {
@@ -93,6 +95,16 @@ bts.forEach( btn=> {
     btn.addEventListener("mouseout", function (e){
         e.target.style.background = 'lightblue';
     })
+});
+
+restartBt.addEventListener("mouseover", function(e){
+    e.target.style.background = 'red';
+    e.target.style.color = 'black';
+});
+
+restartBt.addEventListener("mouseout", function(e){
+    e.target.style.background = 'lightblue';
+    e.target.style.color = 'black';
 });
     
 /*
