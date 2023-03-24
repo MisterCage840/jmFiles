@@ -39,6 +39,29 @@
             border-radius: 5px;
             border: 1px solid black;
         }
+        .score{
+            display: flex;
+            align-items: center;
+        }
+        .scoreboard{
+            color: darkorange;
+            border: 4px solid green;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .overallScore{
+            float: left;
+            color: red;
+            border: 3px solid gold;
+            border-radius: 5px;
+            position: absolute;
+        }
+        .restart{
+            float: right;
+            right: 10px;
+            position: absolute;
+            color: red;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,13 +70,20 @@
 </head>
 
 <body>
+    <button class="restart">Restart Game</button>
     <span><h1>The game of Rock Paper Scissors!</h1></span>
+    
+
     <h2>Pick Human!</h2>
+    <h2 class="overallScore"></h2>
+
     <span class="mainSpan">
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+        <button class="choice">Rock</button>
+        <button class="choice">Paper</button>
+        <button class="choice">Scissors</button>
     </span> 
-    <span class="score"></span>   
+    <span class="score">
+        <h3 class="scoreboard"> </h3>
+    </span>   
 </body>
 </html>
